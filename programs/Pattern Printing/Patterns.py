@@ -60,3 +60,47 @@ o/p:
 1234
 12345
 -----------------------------------------------------------
+Floyd’s Triangle
+n=int(input("enter the number "))
+k=1
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print(k,end=" ")
+        k+=1
+    print()
+
+o/p:
+1 
+2 3
+4 5 6
+7 8 9 10
+------------------------------------------------------------
+n=int(input("enter the number "))
+k=97
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print(chr(k),end=" ")
+        k+=1
+    print()
+
+o/p:
+a 
+b c
+d e f
+g h i j
+k l m n o
+-----------------------------------------------------------
+n=int(input("enter the number "))
+k=97     #use k=65 for 'A'
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print(chr(k),end=" ")
+    k+=1
+    print()
+
+o/p:
+a 
+b b
+c c c
+d d d d
+---------------------------------------------------------------
