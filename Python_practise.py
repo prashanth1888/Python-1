@@ -14,6 +14,20 @@ elif(num>2):
     else: 
         print("prime number")
 
+----------------------------------------------------------
+Prime numbers in the given range 
+----------------------------------------------------------
+
+num=int(input("enter numbers till large"))
+st=int(input("enter minimum limit"))
+for j in range(st,num+1):
+    count=0
+    for i in range(1,j+1):
+        if(j%i==0):
+            count=count+1
+    if(count==2):
+        print(i)
+
 --------------------------------------------------------
 Fibonacci series 
 --------------------------------------------------------
