@@ -1,0 +1,54 @@
+Q1. There are a total number of Monkeys sitting on the branches of a huge Tree. As travelers 
+offer Bananas and Peanuts, the Monkeys jump down the Tree. If every Monkey can eat k 
+Bananas and j Peanuts. If Total m number of Bananas and p number of Peanuts offered by 
+Travelers, calculate how many Monkeys remain on the Tree after some of them jumped down 
+to eat.  
+At a time, one Monkey gets down and finishes eating and goes to the other side of the road. 
+The Monkey who climbed down does not climb up again after eating until the other Monkeys 
+finish eating. Monkeys can either eat k Bananas or j Peanuts. If for the last Monkey there are 
+less than k Bananas left on the ground or less than j Peanuts left on the ground, only that 
+Monkey can eat Bananas (<k) along with the Peanuts (<j).  
+Write the code to take inputs as n, m, p, k, j and return the number of Monkeys left on the 
+Tree.  
+Where, n = Total number of Monkeys  
+k = Number of eatable  Bananas by a single Monkey (Monkey that jumped down last may get 
+less than k Bananas)  
+j = Number of eatable Peanuts by a single Monkey (Monkey that jumped down last may get less 
+than Bananas)  
+m = Total number of Bananas 
+p = Total number of Peanuts  
+Remember that the Monkeys always eat Bananas and Peanuts, so there is no possibility of k 
+and j having a value zero.  
+Example 1:  
+Input Values 
+20 
+2 
+3 
+12 
+12 
+ 
+Output Values  
+Number of Monkeys left on the Tree: 10
+
+------------------------------------------------------------------------
+
+n=int(input("no of monkeys"))
+k=int(input("enter no bananas one monkey can eat "))
+j=int(input("eatable peanuts"))
+m=int(input("total bananas "))
+p=int(input("total peanuts"))
+mks_down=0
+for x in range(n):
+    if(m>=k):
+        mks_down+=1
+        m-=k
+    elif(p>=j):
+        mks_down+=1
+        p-=j
+    elif(m>0 or p>0):
+        m=0
+        p=0
+        mks_down+=1
+        break
+
+print("no of monkeys on tree is : ",n-mks_down)
